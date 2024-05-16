@@ -57,3 +57,17 @@ map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
 vim.keymap.set("n", ";", function()
   require("telescope").extensions.smart_open.smart_open()
 end, { noremap = true, silent = true })
+
+-- Define a function to handle the Tab key
+function _G.smart_tab()
+  if vim.fn["copilot#Accept"]("") == "" then
+    return vim.api.nvim_replace_termcodes("<Tab>", true, true, true)
+  else
+    return vim.fn["copilot#Accept"]("<Tab>")
+  end
+end
+local opts = { noremap = true, silent = true }
+vim.api.nvim_set_keymap("n", "<c-s>", ":lua require('copilot.suggestion').toggle_auto_trigger()<CR>", opts)
+
+-- Map the Tab key to the smart_tab function in insert mode
+vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.smart_tab()", { expr = true, noremap = true })

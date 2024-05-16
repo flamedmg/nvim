@@ -7,15 +7,21 @@ return {
     priority = 99,
     opts = { initial_colorscheme = "neohybrid" },
   },
-
   { "rafi/neo-hybrid.vim", priority = 100, lazy = false },
-  { "rafi/awesome-vim-colorschemes", lazy = false },
+
+  { "rktjmp/lush.nvim" },
+  -- { "rafi/awesome-vim-colorschemes", lazy = false },
   { "AlexvZyl/nordic.nvim" },
-  { "folke/tokyonight.nvim", opts = { style = "night" } },
-  { "rebelot/kanagawa.nvim" },
   { "olimorris/onedarkpro.nvim" },
+  {
+    "xero/miasma.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      -- vim.cmd("colorscheme miasma")
+    end,
+  },
   { "EdenEast/nightfox.nvim" },
-  { "nyoom-engineering/oxocarbon.nvim" },
   {
     "gmr458/vscode_modern_theme.nvim",
     lazy = false,
@@ -26,17 +32,25 @@ return {
         transparent_background = false,
         nvim_tree_darker = true,
       })
-      vim.cmd.colorscheme("vscode_modern")
+    end,
+  },
+  { "metalelf0/jellybeans-nvim", lazy = false },
+  { "okaihe/okai" },
+  {
+    "daneofmanythings/chalktone.nvim",
+    priority = 1000,
+    lazy = false,
+    config = function()
+      require("chalktone").setup()
+      -- vim.g.colorscheme("chalktone")
     end,
   },
   {
     "ribru17/bamboo.nvim",
     config = function()
       require("bamboo").setup({})
-      require("bamboo").load()
     end,
   },
-  { "almo7aya/neogruvbox.nvim" },
   {
     "echasnovski/mini.nvim",
     version = false,

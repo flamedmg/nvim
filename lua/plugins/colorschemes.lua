@@ -14,15 +14,6 @@ return {
   { "AlexvZyl/nordic.nvim" },
   { "olimorris/onedarkpro.nvim" },
   {
-    "xero/miasma.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      -- vim.cmd("colorscheme miasma")
-    end,
-  },
-  { "EdenEast/nightfox.nvim" },
-  {
     "gmr458/vscode_modern_theme.nvim",
     lazy = false,
     priority = 1000,
@@ -56,7 +47,7 @@ return {
     version = false,
     lazy = false,
     config = function()
-      require("mini.hues").setup({ background = "#0E0E0E", foreground = "#c4c6cd", accent = "blue" })
+      -- require("mini.hues").setup({ background = "#0E0E0E", foreground = "#c4c6cd", accent = "blue" })
       -- require('mini.hues').setup { background = '#002734', foreground = '#c0c8cc', accent = 'blue' }
       -- require('mini.hues').setup { background = '#002923', foreground = '#c0c9c7' } -- cyan
       -- require('mini.hues').setup { background = '#002734', foreground = '#c0c8cc' } -- azure

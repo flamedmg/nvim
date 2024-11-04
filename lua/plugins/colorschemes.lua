@@ -28,6 +28,12 @@ return {
   { "metalelf0/jellybeans-nvim", lazy = false },
   { "okaihe/okai" },
   {
+    "sho-87/kanagawa-paper.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+  {
     "daneofmanythings/chalktone.nvim",
     priority = 1000,
     lazy = false,

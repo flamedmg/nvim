@@ -1,5 +1,4 @@
 return {
-
   -- Use last-used colorscheme
   {
     "rafi/theme-loader.nvim",
@@ -12,21 +11,18 @@ return {
   { "rktjmp/lush.nvim" },
   -- { "rafi/awesome-vim-colorschemes", lazy = false },
   { "AlexvZyl/nordic.nvim" },
-  { "olimorris/onedarkpro.nvim" },
   {
-    "gmr458/vscode_modern_theme.nvim",
-    lazy = false,
+    "ilof2/posterpole.nvim",
     priority = 1000,
     config = function()
-      require("vscode_modern").setup({
-        cursorline = true,
-        transparent_background = false,
-        nvim_tree_darker = true,
+      require("posterpole").setup({
+        -- config here
       })
+      -- if you need colorscheme without termguicolors support
+      -- This variant set termguicolors to false, be aware of using it
+      -- vim.cmd("colorscheme posterpole-term")
     end,
   },
-  { "metalelf0/jellybeans-nvim", lazy = false },
-  { "okaihe/okai" },
   {
     "sho-87/kanagawa-paper.nvim",
     lazy = false,
@@ -34,19 +30,22 @@ return {
     opts = {},
   },
   {
-    "daneofmanythings/chalktone.nvim",
-    priority = 1000,
-    lazy = false,
-    config = function()
-      require("chalktone").setup()
-      -- vim.g.colorscheme("chalktone")
-    end,
-  },
-  {
     "ribru17/bamboo.nvim",
     config = function()
       require("bamboo").setup({})
     end,
+  },
+  {
+    "slugbyte/lackluster.nvim",
+    lazy = false,
+    priority = 1000,
+    init = function()
+      -- vim.cmd.colorscheme("lackluster-hack") -- my favorite
+      -- vim.cmd.colorscheme("lackluster-mint")
+    end,
+  },
+  {
+    "aktersnurra/no-clown-fiesta.nvim",
   },
   {
     "echasnovski/mini.nvim",

@@ -1,5 +1,13 @@
 -- Colorscheme configuration
 return {
+  -- Kanagawa Paper colorscheme
+  {
+    "thesimonho/kanagawa-paper.nvim",
+    lazy = true,
+    priority = 1000,
+    opts = {},
+  },
+
   -- Vague colorscheme
   {
     "vague2k/vague.nvim",

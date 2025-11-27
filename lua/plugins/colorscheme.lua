@@ -2,8 +2,8 @@
 return {
   -- Kanagawa Paper colorscheme
   {
-    "thesimonho/kanagawa-paper.nvim",
-    lazy = true,
+    "sho-87/kanagawa-paper.nvim",
+    lazy = false,
     priority = 1000,
     opts = {},
   },
